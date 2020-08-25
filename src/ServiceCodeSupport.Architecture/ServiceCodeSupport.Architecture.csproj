@@ -44,5 +44,11 @@
     <Compile Include="IServiceCodeDictionary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceCodeSupport.APICommon\ServiceCodeSupport.APICommon.csproj">
+      <Project>{1e244893-f349-4617-8a72-e33bbc023f47}</Project>
+      <Name>ServiceCodeSupport.APICommon</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

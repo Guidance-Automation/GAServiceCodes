@@ -22,6 +22,8 @@ namespace ServiceCodeSupport.DemoApp
 	{
 		public MainWindow()
 		{
+			BootStrapper.Activate();
+
 			InitializeComponent();
 		}
 	}

@@ -64,6 +64,10 @@
     <Compile Include="ServiceCodeDictionary.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ServiceCodeSupport.APICommon\ServiceCodeSupport.APICommon.csproj">
+      <Project>{1E244893-F349-4617-8A72-E33BBC023F47}</Project>
+      <Name>ServiceCodeSupport.APICommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ServiceCodeSupport.Architecture\ServiceCodeSupport.Architecture.csproj">
       <Project>{879fe84e-bb8b-4798-a736-145dbec093b7}</Project>
       <Name>ServiceCodeSupport.Architecture</Name>
@@ -72,11 +76,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="Resources\ServiceCodes.sqlite" />
+    <EmbeddedResource Include="Resources\ServiceCodes.sqlite" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
