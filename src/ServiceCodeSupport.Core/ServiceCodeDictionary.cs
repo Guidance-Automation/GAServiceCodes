@@ -42,7 +42,7 @@ namespace ServiceCodeSupport.Core
 
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
-                    command.CommandText = "SELECT ServiceCode, Message, Description FROM ServiceCodes WHERE ServiceCode = @serviceCodeParam";
+                    command.CommandText = "SELECT ServiceCode, Message, Description, Solution FROM ServiceCodes WHERE ServiceCode = @serviceCodeParam";
 
                     SQLiteParameter parameter = new SQLiteParameter("@serviceCodeParam", System.Data.DbType.Int32) { Value = serviceCode };
                     command.Parameters.Add(parameter);
@@ -55,7 +55,8 @@ namespace ServiceCodeSupport.Core
                             {
                                 ServiceCode = reader.GetInt32(0),
                                 Message = reader.GetString(1),
-                                Description = reader.GetString(2)
+                                Description = reader.GetString(2),
+                                Solution = reader.GetString(3)
                             };
                         }                     
                     }

@@ -17,6 +17,7 @@ namespace ServiceCodeSupport.Core.Test
             Assert.AreEqual(0, dto.ServiceCode);
             StringAssert.AreEqualIgnoringCase("no error", dto.Message);
             StringAssert.AreEqualIgnoringCase("The operation has completed successfully.", dto.Description);
+            StringAssert.AreEqualIgnoringCase(string.Empty, dto.Solution);
         }
 
         [Test]
@@ -30,6 +31,7 @@ namespace ServiceCodeSupport.Core.Test
             Assert.AreEqual(1, dto.ServiceCode);
             StringAssert.AreEqualIgnoringCase("Unknown Failure", dto.Message);
             StringAssert.AreEqualIgnoringCase("No description.", dto.Description);
+            StringAssert.AreEqualIgnoringCase("Unknown.", dto.Solution);
         }
     }
 }
