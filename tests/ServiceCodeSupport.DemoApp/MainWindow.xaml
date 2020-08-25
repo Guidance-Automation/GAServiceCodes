@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ServiceCodeSupport.DemoApp"
+        xmlns:view="clr-namespace:ServiceCodeSupport.UI.View;assembly=ServiceCodeSupport.UI"
         mc:Ignorable="d"
         Title="Service Code Support Demo App" Height="450" Width="800">
     <Grid>
-        
+        <view:ServiceCodeDictionaryView/>
     </Grid>
 </Window>
