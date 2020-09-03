@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GAAPICommon.Architecture, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GAAPICommon.1.5.1\lib\netstandard2.0\GAAPICommon.Architecture.dll</HintPath>
+    </Reference>
+    <Reference Include="GAAPICommon.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GAAPICommon.1.5.1\lib\netstandard2.0\GAAPICommon.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,14 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enumerators.cs" />
+    <Compile Include="ExtensionMethods.cs" />
     <Compile Include="IServiceCodeDictionary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ServiceCodeSupport.APICommon\ServiceCodeSupport.APICommon.csproj">
-      <Project>{1e244893-f349-4617-8a72-e33bbc023f47}</Project>
-      <Name>ServiceCodeSupport.APICommon</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

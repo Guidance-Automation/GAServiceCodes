@@ -1,5 +1,5 @@
-﻿using NUnit.Framework;
-using ServiceCodeSupport.APICommon.Dtos;
+﻿using GAAPICommon.Core.Dtos;
+using NUnit.Framework;
 
 namespace ServiceCodeSupport.Core.Test
 {

@@ -1,18 +1,13 @@
-﻿using ServiceCodeSupport.APICommon;
-using ServiceCodeSupport.APICommon.Dtos;
+﻿using GAAPICommon.Core.Dtos;
 using ServiceCodeSupport.Core;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ServiceCodeSupport.DemoConsole
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             ServiceCodeDictionary serviceCodeDictionary = new ServiceCodeDictionary();
 
@@ -28,7 +23,7 @@ namespace ServiceCodeSupport.DemoConsole
                     ServiceCodeDefinitionDto dto = serviceCodeDictionary.GetDefinition(serviceCode);
 
                     if (dto == null)
-                        Console.WriteLine("Unkown service code");
+                        Console.WriteLine("Unknown service code");
                     else
                     {
                         Console.WriteLine(dto.ToSummary());
@@ -38,8 +33,8 @@ namespace ServiceCodeSupport.DemoConsole
                 {
                     if (line.Any() && line.ToLowerInvariant().First().CompareTo('q') == 0)
                         continueFlag = false;
-                }               
-            }            
+                }
+            }
         }
     }
 }

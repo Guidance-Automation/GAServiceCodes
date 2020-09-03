@@ -1,6 +1,5 @@
-﻿using ServiceCodeSupport.APICommon.Dtos;
+﻿using GAAPICommon.Core.Dtos;
 using ServiceCodeSupport.Architecture;
-using System;
 using System.Data.SQLite;
 using System.IO;
 using System.Reflection;
@@ -58,7 +57,7 @@ namespace ServiceCodeSupport.Core
                                 Description = reader.GetString(2),
                                 Solution = reader.GetString(3)
                             };
-                        }                     
+                        }
                     }
                 }
             }
