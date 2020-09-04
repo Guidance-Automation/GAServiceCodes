@@ -36,6 +36,7 @@
         JobBuilder_Issue_IPAddress_Directive_Failed = 1116,
         JobBuilder_Issue_Short_Directive_Failed = 1117,
         JobBuilder_Issue_UShort_Directive_Failed = 1118,
+        JobBuilder_Create_Job_Failed = 1119,
 
         /////////////////////////
         // Jobs State specific //
