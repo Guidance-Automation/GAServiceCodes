@@ -2,66 +2,118 @@
 {
     public enum ErrorCode
     {
-        // Job Builder specific
-        JobBuilder_Job_Id_Commit_Failed = 1001,
-        JobBuilder_Job_Id_Invalid = 1002,
-        JobBuilder_Task_Id_Invalid = 1003,
-        JobBuilder_Parent_Task_Id_Invalid = 1004,
-        JobBuilder_Node_Task_Id_Invalid = 1005,
-        JobBuilder_JobRepository_Not_Accepting_Jobs = 1007,
+        //////////////////////////
+        // Job Builder specific //
+        //////////////////////////
 
-        JobBuilder_Create_Job_Failed = 1010,
-        JobBuilder_Create_GoTo_Node_Task_Failed = 1011,
-        JobBuilder_Create_Atomic_Move_Task_Failed = 1012,
-        JobBuilder_Create_Awaiting_Task_Failed = 1013,
-        JobBuilder_Create_Ordered_ListTask_Failed = 1014,
-        JobBuilder_Create_Servicing_Task_Failed = 1015,
-        JobBuilder_Create_Atomic_Move_ListTask_Failed = 1016,
-        JobBuilder_Begin_Editing_Task_Failed = 1017,
-        JobBuilder_Create_Charge_Task_Failed = 1018,
-        JobBuilder_Create_Sleeping_Task_Failed = 1019,
-
-        JobBuilder_Finish_Editing_Task_Failed = 1020,
-        JobBuilder_Issue_Enum_Directive_failed = 1021,
-        JobBuilder_Create_Unordered_ListTask_Failed = 1022,
-        JobBuilder_Finish_Editing_Job_Failed = 1023,
-        JobBuilder_Issue_Float_Directive_Failed = 1024,
-        JobBuilder_Issue_IPAddress_Directive_Failed = 1025,
-        JobBuilder_Issue_Short_Directive_Failed = 1026,
-        JobBuilder_Issue_UShort_Directive_Failed = 1027,
+        // Generic
+        JobBuilder_Job_Id_Invalid = 1000,
+        JobBuilder_Task_Id_Invalid = 1001,
+        JobBuilder_Parent_Task_Id_Invalid = 1002,
+        JobBuilder_Node_Task_Id_Invalid = 1003,
+        JobBuilder_JobRepository_Not_Accepting_Jobs = 1004,
+        JobBuilder_Job_Invalid = 1005,
 
 
-        // Jobs State specific
-        JobsState_Abort_All_Jobs_For_Agent_Failed = 2002,
+        // Failed Calls
+        JobBuilder_Job_Id_Commit_Failed = 1100,
+        JobBuilder_Commit_Job_Failed = 1101,
+        JobBuilder_Create_GoTo_Node_Task_Failed = 1102,
+        JobBuilder_Create_Atomic_Move_Task_Failed = 1103,
+        JobBuilder_Create_Awaiting_Task_Failed = 1104,
+        JobBuilder_Create_Ordered_ListTask_Failed = 1105,
+        JobBuilder_Create_Servicing_Task_Failed = 1106,
+        JobBuilder_Create_Atomic_Move_ListTask_Failed = 1107,
+        JobBuilder_Begin_Editing_Task_Failed = 1108,
+        JobBuilder_Create_Charge_Task_Failed = 1109,
 
-        // Job State specific
+        JobBuilder_Create_Sleeping_Task_Failed = 1110,
+        JobBuilder_Finish_Editing_Task_Failed = 1111,
+        JobBuilder_Issue_Enum_Directive_failed = 1112,
+        JobBuilder_Create_Unordered_ListTask_Failed = 1113,
+        JobBuilder_Finish_Editing_Job_Failed = 1114,
+        JobBuilder_Issue_Float_Directive_Failed = 1115,
+        JobBuilder_Issue_IPAddress_Directive_Failed = 1116,
+        JobBuilder_Issue_Short_Directive_Failed = 1117,
+        JobBuilder_Issue_UShort_Directive_Failed = 1118,
+
+        /////////////////////////
+        // Jobs State specific //
+        /////////////////////////
+        
+        // Generic
+        JobsState_Task_Id_Invalid = 2000,
+        JobsState_Job_Id_Invalid = 2001,
+
+        // Failed Calls
+        JobsState_Abort_All_Jobs_For_Agent_Failed = 2100,
+        JobsState_Get_Active_Job_Ids_For_Agent_Failed = 2101,
+        JobsState_Abort_Task_Failed = 2102,
+        JobsState_Abort_Job_Failed = 2103,
+
+        ////////////////////////
+        // Job State specific //
+        ////////////////////////
+        
+        // Generic
         JobState_Job_Id_Invalid = 3002,
         JobState_Task_Id_Invalid = 3003,
 
-        // Map specific
-        Map_Set_OccupyingMandate_Failed = 4000,
-        Map_Map_Item_Ids_Invalid = 4008,
-        Map_Timeout_Invalid = 4009,
-        Map_Occupying_Mandate_Already_Set = 4010,
 
-        // Servicing specific
-        Servicing_Outstanding_Requests_Get_Failed = 5001,
-        Servicing_Service_Complete_Set_Failed = 5002,
+        // Failed Calls 
+        JobState_Get_Current_Job_Summary_For_AgentId_Failed = 3100,
+        JobState_Get_Job_Summary_Failed = 3101,
+        JobState_Get_Parent_Job_Summary_From_TaskId_Failed = 3102,
 
-        // Agent specific
-        Agent_Agents_Get_Failed = 6001,
-        Agent_Agent_Data_Get_Lifetime_State_Failed = 6002,
-        Agent_Agent_Lifetime_State_Set_Failed = 6003,
+        //////////////////
+        // Map specific //
+        //////////////////
 
-        // Fleet Manager Specific
-        FleetManager_Set_Frozen_State_Failed = 7002,
-        FleetManager_Get_Kingpin_Description_Failed = 7008,
-        FleetManager_Create_Virtual_Vehicle_Failed = 7009,
+        // Generic
+        Map_Map_Item_Ids_Invalid = 4000,
+        Map_Timeout_Invalid = 4001,
+        Map_Occupying_Mandate_Already_Set = 4002,
 
-        FleetManager_Remove_Vehicle_Failed = 7010,
-        FleetManager_Set_Pose_Failed = 7011,
-        FleetManager_Reset_Kingpin_Failed = 7012,
-        FleetManager_Set_Fleet_State_Failed = 7018,
-        FleetManager_Set_Kingpin_State_Failed = 7019   
+        // Failed
+        Map_Set_OccupyingMandate_Failed = 4100,   
+
+        ////////////////////////
+        // Servicing specific //
+        ////////////////////////
+   
+        // Generic
+
+        // Failed Calls
+        Servicing_Outstanding_Requests_Get_Failed = 5100,
+        Servicing_Service_Complete_Set_Failed = 5101,
+
+        ////////////////////
+        // Agent specific // 
+        ////////////////////
+        
+        // Generic
+
+        // Failed Calls
+        Agent_Agents_Get_Failed = 6100,
+        Agent_Agent_Data_Get_Lifetime_State_Failed = 6101,
+        Agent_Agent_Lifetime_State_Set_Failed = 6102,
+
+        ////////////////////////////
+        // Fleet Manager Specific //
+        ////////////////////////////
+      
+        // Generic
+
+        // Failed Calls
+        FleetManager_Set_Frozen_State_Failed = 7100,
+        FleetManager_Get_Kingpin_Description_Failed = 7101,
+        FleetManager_Create_Virtual_Vehicle_Failed = 7102,
+        FleetManager_Remove_Vehicle_Failed = 7103,
+        FleetManager_Set_Pose_Failed = 7104,
+        FleetManager_Reset_Kingpin_Failed = 7105,
+        FleetManager_Set_Fleet_State_Failed = 7106,
+        FleetManager_Set_Kingpin_State_Failed = 7107,
+        FleetManager_Commit_Waypoints_Failed = 7108,
+        FleetManager_Get_Vehicle_Limit_Failed = 7109
     }
 }
