@@ -1,37 +1,36 @@
 ﻿using GAAPICommon.Core.Dtos;
 using NUnit.Framework;
 
-namespace ServiceCodeSupport.Core.Test
+namespace ServiceCodeSupport.Core.Test;
+
+[TestFixture]
+public class TServiceCodeDictionary
 {
-    [TestFixture]
-    public class TServiceCodeDictionary
+    [Test]
+    public void NoError()
     {
-        [Test]
-        public void NoError()
-        {
-            ServiceCodeDictionary serviceCodeDictionary = new ServiceCodeDictionary();
-            ServiceCodeDefinitionDto dto = serviceCodeDictionary.GetDefinition(0);
+        ServiceCodeDictionary serviceCodeDictionary = new();
+        ServiceCodeDefinitionDto? dto = serviceCodeDictionary.GetDefinition(0);
 
-            Assert.IsNotNull(dto);
+        Assert.That(dto, Is.Not.Null);
 
-            Assert.AreEqual(0, dto.ServiceCode);
-            StringAssert.AreEqualIgnoringCase("no error", dto.Message);
-            StringAssert.AreEqualIgnoringCase("The operation has completed successfully.", dto.Description);
-            StringAssert.AreEqualIgnoringCase(string.Empty, dto.Solution);
-        }
+        Assert.That(dto.ServiceCode, Is.EqualTo(0));
+        Assert.That(dto.Message, Is.EqualTo("no error").IgnoreCase);
+        Assert.That(dto.Description, Is.EqualTo("The operation has completed successfully.").IgnoreCase);
+        Assert.That(dto.Solution, Is.EqualTo(string.Empty).IgnoreCase);
+    }
 
-        [Test]
-        public void UnknownFailure()
-        {
-            ServiceCodeDictionary serviceCodeDictionary = new ServiceCodeDictionary();
-            ServiceCodeDefinitionDto dto = serviceCodeDictionary.GetDefinition(1);
+    [Test]
+    public void UnknownFailure()
+    {
+        ServiceCodeDictionary serviceCodeDictionary = new();
+        ServiceCodeDefinitionDto? dto = serviceCodeDictionary.GetDefinition(1);
 
-            Assert.IsNotNull(dto);
+        Assert.That(dto, Is.Not.Null);
 
-            Assert.AreEqual(1, dto.ServiceCode);
-            StringAssert.AreEqualIgnoringCase("Unknown Failure", dto.Message);
-            StringAssert.AreEqualIgnoringCase("No description.", dto.Description);
-            StringAssert.AreEqualIgnoringCase("Unknown.", dto.Solution);
-        }
+        Assert.That(dto.ServiceCode, Is.EqualTo(1));
+        Assert.That(dto.Message, Is.EqualTo("Unknown Failure").IgnoreCase);
+        Assert.That(dto.Description, Is.EqualTo("No description.").IgnoreCase);
+        Assert.That(dto.Solution, Is.EqualTo("Unknown.").IgnoreCase);
     }
 }
