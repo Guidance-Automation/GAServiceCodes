@@ -8,9 +8,9 @@
 		<Nullable>enable</Nullable>
 		<Authors>Martin Davies, Callum Clarke, Ollie Sharratt</Authors>
 		<Copyright>Guidance Automation 2024</Copyright>
-		<Description>Service code support dictionary.</Description>
-		<RepositoryUrl>https://github.com/Guidance-Automation/ServiceCodeSupport</RepositoryUrl>
-		<PackageId>ServiceCodeSupport</PackageId>
+		<Description>GA Service code support dictionary.</Description>
+		<RepositoryUrl>https://github.com/Guidance-Automation/GAServiceCodes</RepositoryUrl>
+		<PackageId>GAServiceCodes</PackageId>
 		<Company>Guidance Automation LTD</Company>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>

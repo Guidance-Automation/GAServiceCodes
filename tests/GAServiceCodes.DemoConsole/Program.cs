@@ -1,7 +1,6 @@
 ﻿using GAAPICommon.Core.Dtos;
-using ServiceCodeSupport.Core;
 
-namespace ServiceCodeSupport.DemoConsole;
+namespace GAServiceCodes.DemoConsole;
 
 internal class Program
 {

@@ -1,7 +1,7 @@
 ﻿using GAAPICommon.Core.Dtos;
 using NUnit.Framework;
 
-namespace ServiceCodeSupport.Core.Test;
+namespace GAServiceCodes.Test;
 
 [TestFixture]
 public class TServiceCodeDictionary

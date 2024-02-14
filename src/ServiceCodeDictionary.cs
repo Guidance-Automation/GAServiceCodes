@@ -1,9 +1,8 @@
 ﻿using GAAPICommon.Core.Dtos;
 using ServiceCodeSupport.Architecture;
 using System.Data.SQLite;
-using System.Reflection;
 
-namespace ServiceCodeSupport.Core;
+namespace GAServiceCodes;
 
 public class ServiceCodeDictionary : IServiceCodeDictionary
 {

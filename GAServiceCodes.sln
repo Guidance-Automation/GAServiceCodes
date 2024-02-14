@@ -2,11 +2,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceCodeSupport", "src\ServiceCodeSupport.csproj", "{D84A9D45-D293-4323-A29D-12290C385485}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GAServiceCodes", "src\GAServiceCodes.csproj", "{D84A9D45-D293-4323-A29D-12290C385485}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceCodeSupport.Core.Test", "tests\ServiceCodeSupport.Core.Test\ServiceCodeSupport.Core.Test.csproj", "{3132D84F-0E0C-4C22-92EB-40F018F209AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GAServiceCodes.Test", "tests\GAServiceCodes.Test\GAServiceCodes.Test.csproj", "{3132D84F-0E0C-4C22-92EB-40F018F209AD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceCodeSupport.DemoConsole", "tests\ServiceCodeSupport.DemoConsole\ServiceCodeSupport.DemoConsole.csproj", "{3BFAD0CE-3CA9-403C-9DBE-7A859051F973}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GAServiceCodes.DemoConsole", "tests\GAServiceCodes.DemoConsole\GAServiceCodes.DemoConsole.csproj", "{3BFAD0CE-3CA9-403C-9DBE-7A859051F973}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5BF2392D-5B4D-4102-952A-5E387AB724E9}"
 EndProject
