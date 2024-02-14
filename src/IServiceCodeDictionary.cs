@@ -1,6 +1,6 @@
 ﻿using GAAPICommon.Core.Dtos;
 
-namespace ServiceCodeSupport.Architecture;
+namespace GAServiceCodes.Architecture;
 
 public interface IServiceCodeDictionary
 {

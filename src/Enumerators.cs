@@ -1,4 +1,4 @@
-﻿namespace ServiceCodeSupport.Architecture;
+﻿namespace GAServiceCodes.Architecture;
 
 public enum ErrorCode
 {

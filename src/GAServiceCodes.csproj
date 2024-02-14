@@ -23,12 +23,8 @@
 
 	<ItemGroup>
 		<PackageReference Include="GAAPICommon" Version="2.0.0-alpha.1" />
-		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-		<PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
 		<PackageReference Include="System.Data.SQLite" Version="1.0.118" />
-		<PackageReference Include="EntityFramework" Version="6.4.4" />
-		<None Include="..\README.md" Pack="true" PackagePath="\"/>
+		<None Include="..\README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 	<ItemGroup>

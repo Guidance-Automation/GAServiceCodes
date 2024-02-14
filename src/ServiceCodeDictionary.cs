@@ -1,5 +1,5 @@
 ﻿using GAAPICommon.Core.Dtos;
-using ServiceCodeSupport.Architecture;
+using GAServiceCodes.Architecture;
 using System.Data.SQLite;
 
 namespace GAServiceCodes;
