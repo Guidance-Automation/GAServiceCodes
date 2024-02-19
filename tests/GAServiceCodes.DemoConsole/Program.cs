@@ -1,4 +1,4 @@
-﻿using GAAPICommon.Core.Dtos;
+﻿using GAAPICommon.Messages;
 
 namespace GAServiceCodes.DemoConsole;
 
@@ -17,13 +17,13 @@ internal class Program
 
             if (int.TryParse(line, out int serviceCode))
             {
-                ServiceCodeDefinitionDto? dto = serviceCodeDictionary.GetDefinition(serviceCode);
+                ServiceCodeDefinition? dto = serviceCodeDictionary.GetDefinition(serviceCode);
 
                 if (dto == null)
                     Console.WriteLine("Unknown service code");
                 else
                 {
-                    Console.WriteLine(dto.ToSummary());
+                    Console.WriteLine($"{dto.ServiceCode}, {dto.Message}, {dto.Description}");
                 }
             }
             else

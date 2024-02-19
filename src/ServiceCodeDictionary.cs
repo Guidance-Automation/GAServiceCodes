@@ -1,4 +1,4 @@
-﻿using GAAPICommon.Core.Dtos;
+﻿using GAAPICommon.Messages;
 using GAServiceCodes.Architecture;
 using System.Data.SQLite;
 
@@ -24,7 +24,7 @@ public class ServiceCodeDictionary : IServiceCodeDictionary
         HandleLoadDB();
     }
 
-    public ServiceCodeDefinitionDto? GetDefinition(int serviceCode)
+    public ServiceCodeDefinition? GetDefinition(int serviceCode)
     {
         using SQLiteConnection connection = new(connectionString);
         connection.Open();
@@ -38,7 +38,7 @@ public class ServiceCodeDictionary : IServiceCodeDictionary
         using SQLiteDataReader reader = command.ExecuteReader();
         while (reader.Read())
         {
-            return new ServiceCodeDefinitionDto()
+            return new ServiceCodeDefinition()
             {
                 ServiceCode = reader.GetInt32(0),
                 Message = reader.GetString(1),

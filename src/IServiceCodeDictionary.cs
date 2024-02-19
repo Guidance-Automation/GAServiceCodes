@@ -1,8 +1,8 @@
-﻿using GAAPICommon.Core.Dtos;
+﻿using GAAPICommon.Messages;
 
 namespace GAServiceCodes.Architecture;
 
 public interface IServiceCodeDictionary
 {
-    public ServiceCodeDefinitionDto? GetDefinition(int serviceCode);
+    public ServiceCodeDefinition? GetDefinition(int serviceCode);
 }

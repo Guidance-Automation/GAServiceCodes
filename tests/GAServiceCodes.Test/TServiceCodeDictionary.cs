@@ -1,4 +1,4 @@
-﻿using GAAPICommon.Core.Dtos;
+﻿using GAAPICommon.Messages;
 using NUnit.Framework;
 
 namespace GAServiceCodes.Test;
@@ -10,7 +10,7 @@ public class TServiceCodeDictionary
     public void NoError()
     {
         ServiceCodeDictionary serviceCodeDictionary = new();
-        ServiceCodeDefinitionDto? dto = serviceCodeDictionary.GetDefinition(0);
+        ServiceCodeDefinition? dto = serviceCodeDictionary.GetDefinition(0);
 
         Assert.That(dto, Is.Not.Null);
 
@@ -24,7 +24,7 @@ public class TServiceCodeDictionary
     public void UnknownFailure()
     {
         ServiceCodeDictionary serviceCodeDictionary = new();
-        ServiceCodeDefinitionDto? dto = serviceCodeDictionary.GetDefinition(1);
+        ServiceCodeDefinition? dto = serviceCodeDictionary.GetDefinition(1);
 
         Assert.That(dto, Is.Not.Null);
 
