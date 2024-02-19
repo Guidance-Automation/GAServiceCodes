@@ -1,4 +1,4 @@
-﻿using GAAPICommon.Core.Dtos;
+﻿using GAAPICommon.Messages;
 using GAServiceCodes.Architecture;
 using System.Data.SQLite;
 
