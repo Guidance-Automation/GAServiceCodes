@@ -77,6 +77,13 @@ public enum ErrorCode
 
     // Failed
     Map_Set_OccupyingMandate_Failed = 4100,
+    Map_ClearOccupyingMandate_Failed = 41001,
+    Map_Get_All_Parameter_Data_Failed = 41002,
+    Map_Get_All_Move_Data_Failed = 41003,
+    Map_Get_All_Node_Data_Failed = 41004,
+    Map_Get_Occupying_Mandate_Progress_Data_Failed = 41005,
+    Map_Get_Trajectory_Failed = 41006,
+
 
     ////////////////////////
     // Servicing specific //
@@ -115,5 +122,6 @@ public enum ErrorCode
     FleetManager_Set_Fleet_State_Failed = 7106,
     FleetManager_Set_Kingpin_State_Failed = 7107,
     FleetManager_Commit_Waypoints_Failed = 7108,
-    FleetManager_Get_Vehicle_Limit_Failed = 7109
+    FleetManager_Get_Vehicle_Limit_Failed = 7109,
+    FleetManager_Agent_Does_Not_Exist = 7110
 }
