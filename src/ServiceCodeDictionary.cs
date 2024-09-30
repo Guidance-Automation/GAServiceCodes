@@ -1,6 +1,6 @@
 ﻿using GAAPICommon.Messages;
 using GAServiceCodes.Architecture;
-using System.Data.SQLite;
+using Microsoft.Data.Sqlite;
 
 namespace GAServiceCodes;
 
@@ -19,23 +19,22 @@ public class ServiceCodeDictionary : IServiceCodeDictionary
     public ServiceCodeDictionary()
     {
         FileName = Path.GetTempFileName();
-        connectionString = $"Data Source={FileName};Version=3;Read Only=True;";
+        connectionString = $"Data Source={FileName};Mode=ReadOnly";
 
         HandleLoadDB();
     }
 
     public ServiceCodeDefinitionDto? GetDefinition(int serviceCode)
     {
-        using SQLiteConnection connection = new(connectionString);
+        using SqliteConnection connection = new(connectionString);
         connection.Open();
 
-        using SQLiteCommand command = new(connection);
-        command.CommandText = "SELECT ServiceCode, Message, Description, Solution FROM ServiceCodes WHERE ServiceCode = @serviceCodeParam";
+        using SqliteCommand command = new("SELECT ServiceCode, Message, Description, Solution FROM ServiceCodes WHERE ServiceCode = @serviceCodeParam", connection);
 
-        SQLiteParameter parameter = new("@serviceCodeParam", System.Data.DbType.Int32) { Value = serviceCode };
+        SqliteParameter parameter = new("@serviceCodeParam", SqliteType.Integer) { Value = serviceCode };
         command.Parameters.Add(parameter);
 
-        using SQLiteDataReader reader = command.ExecuteReader();
+        using SqliteDataReader reader = command.ExecuteReader();
         while (reader.Read())
         {
             return new ServiceCodeDefinitionDto()
