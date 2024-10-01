@@ -6,9 +6,9 @@ namespace GAServiceCodes;
 
 public class ServiceCodeDictionary : IServiceCodeDictionary
 {
-    public string FileName { get; } = string.Empty;
+    private readonly string _connectionString = string.Empty;
 
-    private string connectionString { get; } = string.Empty;
+    public string FileName { get; } = string.Empty;
 
     private void HandleLoadDB()
     {
@@ -19,14 +19,13 @@ public class ServiceCodeDictionary : IServiceCodeDictionary
     public ServiceCodeDictionary()
     {
         FileName = Path.GetTempFileName();
-        connectionString = $"Data Source={FileName};Mode=ReadOnly";
-
+        _connectionString = $"Data Source={FileName};Mode=ReadOnly";
         HandleLoadDB();
     }
 
     public ServiceCodeDefinitionDto? GetDefinition(int serviceCode)
     {
-        using SqliteConnection connection = new(connectionString);
+        using SqliteConnection connection = new(_connectionString);
         connection.Open();
 
         using SqliteCommand command = new("SELECT ServiceCode, Message, Description, Solution FROM ServiceCodes WHERE ServiceCode = @serviceCodeParam", connection);
