@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<OutputType>Exe</OutputType>
+		<Platforms>x64</Platforms>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\GAServiceCodes.csproj" />
+	</ItemGroup>
+
+</Project>
