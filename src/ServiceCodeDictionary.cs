@@ -1,5 +1,4 @@
 ﻿using GAAPICommon.Messages;
-using GAServiceCodes.Architecture;
 using Microsoft.Data.Sqlite;
 
 namespace GAServiceCodes;

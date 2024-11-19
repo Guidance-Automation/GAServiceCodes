@@ -1,6 +1,6 @@
 ﻿using GAAPICommon.Messages;
 
-namespace GAServiceCodes.Architecture;
+namespace GAServiceCodes;
 
 public static class ExtensionMethods
 {
