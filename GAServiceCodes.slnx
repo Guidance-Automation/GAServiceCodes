@@ -1,0 +1,20 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="tests/GAServiceCodes.DemoConsole/GAServiceCodes.DemoConsole.csproj">
+      <Build Solution="Release|*" Project="false" />
+    </Project>
+    <Project Path="tests/GAServiceCodes.Test/GAServiceCodes.Test.csproj">
+      <Build Solution="Release|*" Project="false" />
+    </Project>
+  </Folder>
+  <Project Path="src/GAServiceCodes.csproj">
+    <Build Solution="Release|*" Project="false" />
+  </Project>
+</Solution>
