@@ -14,7 +14,5 @@
       <Build Solution="Release|*" Project="false" />
     </Project>
   </Folder>
-  <Project Path="src/GAServiceCodes.csproj">
-    <Build Solution="Release|*" Project="false" />
-  </Project>
+  <Project Path="src/GAServiceCodes.csproj" />
 </Solution>
