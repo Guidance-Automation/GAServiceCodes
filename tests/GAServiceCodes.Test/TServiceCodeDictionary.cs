@@ -7,6 +7,40 @@ namespace GAServiceCodes.Test;
 public class TServiceCodeDictionary
 {
     [Test]
+    public void EveryGenericServiceCodeHasADefinition()
+    {
+        ServiceCodeDictionary serviceCodeDictionary = new();
+
+        using (Assert.EnterMultipleScope())
+        {
+            foreach (GAAPICommon.Enums.ServiceCode serviceCode in Enum.GetValues<GAAPICommon.Enums.ServiceCode>())
+            {
+                Assert.That(
+                    serviceCodeDictionary.GetDefinition((int)serviceCode),
+                    Is.Not.Null,
+                    $"No definition exists for {serviceCode} ({(int)serviceCode}).");
+            }
+        }
+    }
+
+    [Test]
+    public void EveryDeclaredErrorCodeHasADefinition()
+    {
+        ServiceCodeDictionary serviceCodeDictionary = new();
+
+        using (Assert.EnterMultipleScope())
+        {
+            foreach (ErrorCode errorCode in Enum.GetValues<ErrorCode>())
+            {
+                Assert.That(
+                    serviceCodeDictionary.GetDefinition(errorCode),
+                    Is.Not.Null,
+                    $"No definition exists for {errorCode} ({(int)errorCode}).");
+            }
+        }
+    }
+
+    [Test]
     public void NoError()
     {
         ServiceCodeDictionary serviceCodeDictionary = new();
