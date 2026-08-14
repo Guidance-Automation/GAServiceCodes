@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<PackageVersion>2.2.0</PackageVersion>
+		<PackageVersion>2.2.1</PackageVersion>
 		<Platforms>AnyCPU</Platforms>
 		<ImplicitUsings>true</ImplicitUsings>
 		<Nullable>enable</Nullable>
@@ -24,9 +24,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="GAAPICommon" Version="3.0.0" />
-		<PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.10" />
-		<PackageReference Include="SQLitePCLRaw.lib.e_sqlite3" Version="2.1.12" />
+		<PackageReference Include="GAAPICommon" Version="3.0.3" />
+		<PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.11" />
 		<None Include="..\README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
